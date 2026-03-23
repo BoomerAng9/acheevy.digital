@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-black text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACHEEVY.DIGITAL | The Anatomy of Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+                    },
+                    colors: {
+                        obsidian: '#000000',
+                        glass: '#111111',
+                        accent: '#F5F5F7'
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'spin-slow': 'spin 20s linear infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: 0, transform: 'translateY(30px) scale(0.95)' },
+                            '100%': { opacity: 1, transform: 'translateY(0) scale(1)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: black; -webkit-font-smoothing: antialiased; }
+        
+        .hardware-grid {
+            background-size: 60px 60px;
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.4) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .chip-container {
+            border: 1px solid rgba(255,255,255,0.1);
+            background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.05) 0%, transparent 70%), #0A0A0A;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+        }
+
+        .chip-highlight {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+        }
+
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover { color: #fff; }
+    </style>
+</head>
+<body class="hardware-grid min-h-screen selection:bg-white selection:text-black">
+
+    <!-- Global Nav -->
+    <nav class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between text-xs font-semibold tracking-wide text-gray-400">
+            <span class="text-white tracking-widest uppercase">ACHEEVY.DIGITAL</span>
+            <div class="hidden md:flex gap-8">
+                <a href="#kernel" class="nav-link">The Kernel</a>
+                <a href="#subsystems" class="nav-link">Architecture</a>
+                <a href="#execution" class="nav-link">Chicken Hawk Bridge</a>
+            </div>
+            <a href="https://agent.acheevy.digital" class="text-white hover:opacity-70 transition-opacity flex items-center gap-2">
+                <span>Engage Runtime</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero / The Kernel -->
+    <section id="kernel" class="relative min-h-[100vh] flex flex-col items-center justify-center px-6 pt-20 overflow-hidden">
+        <div class="w-[800px] h-[800px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
+            <!-- Abstract rotating geometry representing the OS Kernel -->
+            <svg viewBox="0 0 100 100" class="w-full h-full animate-spin-slow">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="white" stroke-width="0.2" stroke-dasharray="2 4"/>
+                <circle cx="50" cy="50" r="30" fill="none" stroke="white" stroke-width="0.3" stroke-dasharray="1 6"/>
+                <rect x="45" y="45" width="10" height="10" fill="none" stroke="white" stroke-width="0.5"/>
+            </svg>
+        </div>
+
+        <div class="z-10 text-center max-w-4xl mx-auto opacity-0 animate-fade-in-up" style="animation-delay: 0.2s;">
+            <p class="text-gray-400 font-semibold tracking-[0.2em] text-xs uppercase mb-8">Unstructured Intelligence is Entropy</p>
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-6 text-gradient">
+                The Sociotechnical <br>Operating System.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-500 max-w-2xl mx-auto font-medium leading-relaxed">
+                Freedom at the edges. Constraints at the kernel. An uncompromising baseline state machine orchestrating dozens of asynchronous agents.
+            </p>
+        </div>
+    </section>
+
+    <!-- The Tear-Down: Subsystems -->
+    <section id="subsystems" class="py-32 px-6 border-t border-white/5 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-center mb-24 text-gradient">The Anatomy of the Runtime.</h2>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-16">
+                <!-- Researcher (Sensor Array) -->
+                <div class="chip-container rounded-3xl p-10 lg:p-14 relative overflow-hidden group">
+                    <div class="chip-highlight absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    <p class="text-xs tracking-[0.2em] text-gray-500 uppercase mb-4">The Sensor Array</p>
+                    <h3 class="text-3xl font-bold mb-4 tracking-tight">ACHEEVY_researcher</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Deep Web Intelligence. Multi-step reasoning engines that compress the internet's noise into verified facts before execution. BAML-structured outputs and parallel scraping pipelines feed the organism pure signal.
+                    </p>
+                </div>
+
+                <!-- Commons (Memory Core) -->
+                <div class="chip-container rounded-3xl p-10 lg:p-14 relative overflow-hidden group">
+                    <div class="chip-highlight absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    <p class="text-xs tracking-[0.2em] text-gray-500 uppercase mb-4">The Secure Enclave</p>
+                    <h3 class="text-3xl font-bold mb-4 tracking-tight">ACHEEVY_commons</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        The Vector Index. Immutable memories, RAG nodes, and massive dataset embeddings retrieved in milliseconds. Utilizing Postgres and VectorChord to guarantee sub-second situational recall.
+                    </p>
+                </div>
+
+                <!-- Agent (CPU Matrix) -->
+                <div class="chip-container rounded-3xl p-10 lg:p-14 relative overflow-hidden group">
+                    <div class="chip-highlight absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    <p class="text-xs tracking-[0.2em] text-gray-500 uppercase mb-4">The Digital CEO</p>
+                    <h3 class="text-3xl font-bold mb-4 tracking-tight">ACHEEVY_agent</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Iterative Execution. The orchestrator interfacing with your codebase. Scaffolding full-stack robust applications autonomously, testing iteratively, and dropping results securely over protocols.
+                    </p>
+                </div>
+
+                <!-- Ground (Logic Board) -->
+                <div class="chip-container rounded-3xl p-10 lg:p-14 relative overflow-hidden group">
+                    <div class="chip-highlight absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    <p class="text-xs tracking-[0.2em] text-gray-500 uppercase mb-4">The Logic Board</p>
+                    <h3 class="text-3xl font-bold mb-4 tracking-tight">ACHEEVY_ground</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Absolute State Control. NATS jet-streams and unforgeable CAS locks eliminate split-brain errors entirely. A permanent CardBox ledger for total traceability of every cognitive heartbeat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Execution Bridge / SaaS Portal -->
+    <section id="execution" class="py-32 border-t border-white/5 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#111] pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <p class="text-gray-400 font-semibold tracking-[0.2em] text-xs uppercase mb-8">The Execution Bridge</p>
+            <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-8">Engage Chicken Hawk.</h2>
+            <p class="text-xl text-gray-400 leading-relaxed mb-12">
+                When you initiate a workflow via ACHEEVY.DIGITAL, the protocol payload physically bridges to <strong>Chicken Hawk</strong>—our private NemoClaw execution runtime located in the MyClaw datacenter structure. Heavy logic processing occurs isolated from the deployment shell, ensuring untethered computational speed. A single subscription unlocks the complete array.
+            </p>
+            
+            <a href="https://agent.acheevy.digital" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold tracking-wide hover:scale-105 transition-transform duration-300">
+                <span>Step Into The Runtime</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Minimal Footer -->
+    <footer class="py-8 border-t border-white/10 text-center text-xs text-gray-600 font-medium tracking-wide">
+        <p>ACHIEVEMOR x AIMS. Architected by Intelligent Internet. Assembled by Antigravity.</p>
+    </footer>
+
+</body>
+</html>
