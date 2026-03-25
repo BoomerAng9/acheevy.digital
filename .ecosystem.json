@@ -1,0 +1,27 @@
+{
+  "node": "acheevy-digital",
+  "role": "marketing",
+  "network": "boomerang9-ecosystem",
+  "version": "1.0.0",
+  "description": "acheevy.digital — public marketing site, landing pages, and user acquisition funnel",
+  "provides": [
+    { "name": "landing-pages", "path": "index.html", "description": "Public landing and marketing pages" },
+    { "name": "marketing-site", "path": "/", "description": "Brand presence and user acquisition" }
+  ],
+  "consumes": [
+    { "node": "aims", "capability": "web-app", "endpoint": "https://aims.acheevy.digital" },
+    { "node": "destinations-ai", "capability": "api", "endpoint": "https://destinations.acheevy.digital" },
+    { "node": "estatemind-ai", "capability": "api", "endpoint": "https://estate.acheevy.digital" }
+  ],
+  "connections": {
+    "aims": { "type": "links-to", "purpose": "CTA buttons funnel users into AIMS platform" },
+    "destinations-ai": { "type": "links-to", "purpose": "Travel vertical showcase and signup" },
+    "estatemind-ai": { "type": "links-to", "purpose": "Real estate vertical showcase and signup" },
+    "myclaw": { "type": "referenced-by", "purpose": "Deployment orchestration" }
+  },
+  "file_index": {
+    "entrypoints": ["index.html"],
+    "config": ["acheevy.conf", "docker-compose.yml", "deploy.ps1"],
+    "backend": ["backend/"]
+  }
+}
